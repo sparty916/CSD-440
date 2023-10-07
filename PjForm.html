@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <!-- 
+    Pj Ellis - 9/6/2023 - CSD440 - Module 7
+    Write a form program that prompts a user to enter seven different fields 
+    of data, using a minimum of four different data type entries.
+    When the form is submitted to your PHP CGI, you are then to verify all 
+    fields were populated and the data was correctly entered.
+    Then, in your return, display the data entered in a well formatted page, 
+    otherwise you will return an error display to report the problem.
+    -->
+
+<head>
+    <title>Module 7 - PJs Form</title>
+</head>
+
+<body>
+    <h1>Module 7</h1>
+    <h3>PHP Form Validation and Display</h3>
+    <p>This PHP script first checks if the form has been submitted.
+        If submitted, it validates the data, and if there are errors,
+        it displays them. Otherwise, it displays the entered data in
+        a well-formatted manner.
+    </p>
+
+    <form action='PjFormPost.php' method='post'>
+        <label>
+            Name:
+        </label><br>
+        <input type="text" name="name"><br>
+        <label>
+            Phone:
+        </label><br>
+        <input type="text" name="phone"><br>
+        <lable>
+            Email:
+        </label><br>
+        <input type="text" name="email"><br>
+        <label>
+            Password:
+        </label><br>
+        <input type="password" name="pword"><br>
+        <label>
+            Age Range:
+        </lable><br>
+            <select name="ageRange">
+                <option selected="selected" value="Prefer Not To Answer">Prefer Not To Answer</option>
+                <option value="0-18">0-18</option>
+                <option value="19-29">19-29</option>
+                <option value="30-50">30-50</option>
+                <option value="51 and over">51 and over</option>
+            </select><br>
+        <lable>        
+            Pronouns:
+        </label><br>
+        <input type="radio" name="pronoun" value="He/Him"> He/Him
+        <input type="radio" name="pronoun" value="She/Her"> She/Her
+        <input type="radio" name="pronoun" value="They/Them"> They/Them
+        <input type="radio" name="pronoun" value="Prefer Not To Answer" checked="checked"> Prefer Not To Answer<br>
+        <label>
+            Hobbies:
+        </label><br>
+        <input type="checkbox" name="hobbies[]" id="1" value="Eating"><label for="1">Eating</label><br>
+        <input type="checkbox" name="hobbies[]" id="2" value="Drinking"><label for="2">Drinking</label><br>
+        <input type="checkbox" name="hobbies[]" id="3" value="Coding"><label for="3">Coding</label><br>
+        <input type="checkbox" name="hobbies[]" id="4" value="Sleeping"><label for="4">Sleeping</label><br>
+        <label>
+            Comments:
+        </label><br>
+        <textarea name="comments" rows="7" cols="25"></textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
